@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 18%;
+    --primary: 48 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 80 25% 88%;
+    --secondary-foreground: 0 0% 18%;
+    --muted: 80 25% 88%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 80 25% 88%;
+    --accent-foreground: 0 0% 18%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 80 20% 85%;
+    --input: 80 20% 85%;
+    --ring: 48 100% 50%;
+    --radius: 0.5rem;
+    --blue-primary: 220 65% 40%;
+    --blue-secondary: 220 50% 60%;
+    --green-dark: 80 30% 25%;
+    
+    /* ESGB Brand Colors */
+    --primary-green: #82C13F;
+    --primary-blue: #3151B4;
+    --primary-green-dark: #6FA835;
+    --primary-blue-dark: #263E8A;
+    --text-white: #FFFFFF;
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 48 100% 50%;
+    --primary-foreground: 0 0% 18%;
+    --secondary: 80 30% 25%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 80 30% 25%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 80 30% 25%;
+    --accent-foreground: 0 0% 95%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 48 100% 50%;
+    --blue-primary: 220 65% 50%;
+    --blue-secondary: 220 50% 70%;
+    --green-dark: 80 30% 35%;
+    
+    /* ESGB Brand Colors */
+    --primary-green: #82C13F;
+    --primary-blue: #3151B4;
+    --primary-green-dark: #6FA835;
+    --primary-blue-dark: #263E8A;
+    --text-white: #FFFFFF;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-normal;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-semibold;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl font-medium;
+  }
+
+  h6 {
+    @apply text-base md:text-lg font-medium;
+  }
+
+  p {
+    @apply leading-relaxed max-w-prose;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-spacing {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, hsl(48 100% 50%) 0%, hsl(80 30% 25%) 100%);
+  }
+
+  .bg-gradient-blue {
+    background: linear-gradient(135deg, hsl(220 65% 40%) 0%, hsl(220 50% 60%) 100%);
+  }
+
+  .shadow-eco {
+    box-shadow: 0 4px 20px rgba(130, 193, 63, 0.15);
+  }
+
+  .shadow-eco-lg {
+    box-shadow: 0 10px 40px rgba(130, 193, 63, 0.2);
+  }
+}
